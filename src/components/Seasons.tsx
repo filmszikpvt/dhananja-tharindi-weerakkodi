@@ -1,6 +1,6 @@
 import { Fragment, useLayoutEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion';
-import { seasons, type Season } from '../data/portfolio';
+import { seasons, teachingPhilosophy, type Season } from '../data/portfolio';
 import { useDesktop, useReducedMotionPref } from '../hooks/useMedia';
 import { EASE, SectionHeading } from './fx';
 import EpisodeCard from './EpisodeCard';
@@ -17,11 +17,24 @@ export default function Seasons() {
       />
       {seasons.map((season) => (
         <Fragment key={season.number}>
+          {season.number === 2 && <PhilosophyStatement />}
           <SeasonRail season={season} />
           {season.number === 1 && <InternshipEvidence />}
         </Fragment>
       ))}
     </>
+  );
+}
+
+function PhilosophyStatement() {
+  return (
+    <section id="teaching-philosophy" className="gutter scroll-mt-24 py-10 sm:py-14">
+      <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.32em] text-crimson-2">S02 · Teaching Philosophy</p>
+      <h3 className="font-display text-3xl tracking-wide text-bone sm:text-4xl">My Teaching Philosophy</h3>
+      <div className="mt-5 max-w-4xl space-y-4 border-l border-crimson-2/35 pl-5 text-[15px] leading-7 text-bone/75 sm:pl-7">
+        {teachingPhilosophy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+      </div>
+    </section>
   );
 }
 
@@ -40,8 +53,7 @@ function EpisodeRail({ season }: { season: Season }) {
 
   return (
     <motion.div
-      id={season.number === 2 ? 'teaching-philosophy' : undefined}
-      className={season.number === 2 ? 'scroll-mt-24' : ''}
+      className="relative"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-8% 0px' }}
@@ -101,8 +113,7 @@ function PinnedSeason({ season }: { season: Season }) {
   return (
     <div
       ref={wrap}
-      id={season.number === 2 ? 'teaching-philosophy' : undefined}
-      className={season.number === 2 ? 'relative scroll-mt-20' : 'relative'}
+      className="relative"
       style={{ height: 'calc(100vh + ' + distance + 'px)' }}
     >
       <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden">

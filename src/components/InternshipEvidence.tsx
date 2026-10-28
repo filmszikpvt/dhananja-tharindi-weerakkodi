@@ -11,14 +11,12 @@ type PdfGroup = { title: string; description: string; label: string; documents: 
 const groups: PdfGroup[] = [
   {
     title: 'Weekly Teaching Evidence',
-    description: 'Lesson and observation files from the internship weeks.',
+    description: 'Lesson plans and weekly evidence from the internship.',
     label: 'WEEKLY EVIDENCE',
     documents: [
       { title: 'Week 1 Evidence', file: 'WEEK 1 PDF.pdf', detail: 'Weekly internship record.', tags: ['Week 1', 'Evidence'] },
       { title: 'Week 2 Lesson Plan', file: 'Week 2 Lesson plan pdf.pdf', detail: 'Lesson planning record from Week 2.', tags: ['Week 2', 'Lesson plan'] },
-      { title: 'Week 2 Observation Form', file: 'Week 2 Observation Form pdf.pdf', detail: 'Observation record from Week 2.', tags: ['Week 2', 'Observation'] },
       { title: 'Week 3 Evidence', file: 'WEEK 3 PDF.pdf', detail: 'Weekly internship record.', tags: ['Week 3', 'Evidence'] },
-      { title: 'Week 4 Observation Form', file: 'Week 4 Observation Form pdf.pdf', detail: 'Observation record from Week 4.', tags: ['Week 4', 'Observation'] },
       { title: 'Week 4 Evidence', file: 'WEEK 4 PDF.pdf', detail: 'Weekly internship record.', tags: ['Week 4', 'Evidence'] },
       { title: 'Week 5 Evidence', file: 'WEEK 5 PDF.pdf', detail: 'Weekly internship record.', tags: ['Week 5', 'Evidence'] },
       { title: 'Week 6 Evidence', file: 'WEEK 6 PDF 2.pdf', detail: 'Weekly internship record.', tags: ['Week 6', 'Evidence'] },
@@ -37,6 +35,8 @@ const groups: PdfGroup[] = [
     documents: [
       { title: 'Principal Consent Form', file: 'Consent Form by Principal.pdf', detail: 'Consent document from the school principal.', tags: ['Consent', 'School'] },
       { title: 'Teacher-in-Charge Consent Form', file: 'Consent Form by the Teacher-in-Charge.pdf', detail: 'Consent document from the teacher-in-charge.', tags: ['Consent', 'School'] },
+      { title: 'Observation Form 1', file: 'Week 2 Observation Form pdf.pdf', detail: 'Classroom observation record from Week 2.', tags: ['Observation', 'Week 2'] },
+      { title: 'Observation Form 2', file: 'Week 4 Observation Form pdf.pdf', detail: 'Classroom observation record from Week 4.', tags: ['Observation', 'Week 4'] },
       { title: 'Letter of Completion', file: 'Letter of completion.pdf', detail: 'Teaching internship completion document.', tags: ['Completion', 'Internship'] },
       { title: 'Internship Time Table', file: 'Time table.pdf', detail: 'Timetable for the teaching internship.', tags: ['Timetable', 'Internship'] },
     ],
