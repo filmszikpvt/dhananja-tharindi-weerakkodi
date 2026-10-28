@@ -44,7 +44,7 @@ const groups: PdfGroup[] = [
 ];
 
 const palettes: Palette[] = seasons[0].episodes.map((episode) => episode.palette);
-const pdfUrl = (file: string) => `/file/${encodeURIComponent(file)}`;
+const pdfUrl = (file: string) => `${import.meta.env.BASE_URL}file/${encodeURIComponent(file)}`;
 
 export default function InternshipEvidence() {
   return (

@@ -4,7 +4,10 @@ import { createPortal } from 'react-dom';
 import { EASE, SectionHeading } from './fx';
 import { useScrollLock } from '../hooks/smoothScroll';
 
-const photos = Array.from({ length: 14 }, (_, index) => `/scl-img/img%20(${index + 1}).jpeg`);
+const photos = Array.from(
+  { length: 14 },
+  (_, index) => `${import.meta.env.BASE_URL}scl-img/img%20(${index + 1}).jpeg`,
+);
 
 export default function PhotoGallery() {
   const [selected, setSelected] = useState<number | null>(null);

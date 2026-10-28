@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+  base: '/dhananja-tharindi-weerakkodi/',
   plugins: [react(), tailwindcss()],
-  base:'/dhananja-tharindi-weerakkodi/',
   build: {
     target: 'es2020',
     rollupOptions: {

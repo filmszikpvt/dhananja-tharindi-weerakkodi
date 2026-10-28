@@ -6,7 +6,7 @@ export const profile = {
   displayName: 'Dhananja Tharindi Weerakkodi',
   nameLines: ['Dhananja Tharindi', 'Weerakkodi'],
   monogram: 'DTW',
-  portrait: '/assets/dhananja-owner-cutout.png',
+  portrait: `${import.meta.env.BASE_URL}assets/dhananja-owner-cutout.png`,
   portraitAlt: 'Dhananja Tharindi Weerakkodi',
   seriesTag: 'THE REFLECTIVE ENGLISH TEACHER',
   originalLabel: 'A TEACHER IN PRACTICE',
