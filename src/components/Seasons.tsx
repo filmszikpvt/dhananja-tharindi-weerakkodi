@@ -36,9 +36,9 @@ function PhilosophyStatement() {
       <a
         href={philosophyStatementUrl}
         download="Teaching Philosophy Statement.docx"
-        className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-bone/80 transition hover:border-crimson-2/60 hover:text-bone focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-2"
+        className="mt-4 inline-flex min-h-12 items-center gap-2 rounded-full bg-crimson px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white shadow-[0_0_22px_rgba(229,19,43,0.24)] transition hover:bg-crimson-2 hover:shadow-[0_0_28px_rgba(229,19,43,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-crimson-2"
       >
-        Download statement <span aria-hidden>↓</span>
+        Download Teaching Philosophy (.DOCX) <span aria-hidden>↓</span>
       </a>
       <div className="mt-5 max-w-4xl space-y-4 border-l border-crimson-2/35 pl-5 text-[15px] leading-7 text-bone/75 sm:pl-7">
         {teachingPhilosophy.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
